@@ -1,0 +1,17 @@
+.appShell { display: flex; flex-direction: column; min-height: 100vh; max-width: 680px; margin: 0 auto; position: relative; }
+.main { flex: 1; padding: 16px 16px calc(var(--nav-h) + 16px); }
+.disciplineBanner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 18px; font-size: 13px; font-weight: 600;
+  color: var(--danger-light);
+  background: linear-gradient(90deg, rgba(239,68,68,0.18), rgba(239,68,68,0.08));
+  border-bottom: 1px solid rgba(239,68,68,0.25);
+  animation: pulse 2s ease infinite;
+}
+.disciplineBanner button {
+  font-size: 12px; color: var(--text-muted); text-decoration: underline;
+  cursor: pointer; background: none; border: none;
+}
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.7; } }
+
+@media (min-width: 640px) { .main { padding: 24px 24px calc(var(--nav-h) + 24px); } }

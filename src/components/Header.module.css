@@ -1,0 +1,75 @@
+.header {
+  position: sticky; top: 0; z-index: 100;
+  height: var(--header-h);
+  background: rgba(8,9,16,0.88); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 16px; gap: 10px;
+}
+.logo { font-size: 17px; font-weight: 900; letter-spacing: -.5px; white-space: nowrap; }
+.balancePill {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 999px; padding: 6px 14px; flex-shrink: 0;
+}
+.balLabel { font-size: 11px; color: var(--text-muted); font-weight: 500; }
+.balAmount { font-size: 14px; font-weight: 800; color: var(--accent-light); transition: color .3s; }
+.balAmount.negative { color: var(--danger-light); }
+.actions { display: flex; align-items: center; gap: 8px; }
+.userBadge {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 999px; padding: 5px 11px;
+  font-size: 12px; font-weight: 700; color: var(--warning-light); white-space: nowrap;
+}
+.pts { font-size: 11px; }
+.iconBtn {
+  width: 36px; height: 36px; border-radius: 999px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  font-size: 15px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all .2s; position: relative; flex-shrink: 0;
+}
+.iconBtn:hover { border-color: var(--border-hover); background: var(--bg-card-hover); }
+.disciplineOn { border-color: rgba(239,68,68,.5); animation: disciplinePulse 2s ease infinite; }
+@keyframes disciplinePulse { 0%,100% { box-shadow: none; } 50% { box-shadow: 0 0 0 3px rgba(239,68,68,.3); } }
+.badge {
+  position: absolute; top: -4px; right: -4px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--danger); color: #fff; font-size: 9px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--bg-base);
+}
+.notifWrap { position: relative; }
+.notifPanel {
+  position: absolute; right: 0; top: calc(100% + 10px); width: 300px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 16px;
+  box-shadow: var(--shadow-md); z-index: 200;
+  max-height: 380px; overflow-y: auto;
+  animation: dropDown .2s ease;
+}
+@keyframes dropDown { from { opacity:0; transform: translateY(-8px); } to { opacity:1; transform: translateY(0); } }
+.notifHeader {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+.notifHeader h3 { font-size: 14px; font-weight: 700; }
+.notifHeader button { font-size: 16px; color: var(--text-muted); cursor: pointer; background: none; border: none; }
+.notifList { display: flex; flex-direction: column; gap: 8px; }
+.notifEmpty { font-size: 13px; text-align: center; color: var(--text-muted); padding: 16px 0; }
+.notifItem {
+  padding: 10px 12px; border-radius: 10px;
+  background: rgba(255,255,255,.04); border-left: 3px solid var(--primary);
+}
+.notifItem strong { font-size: 13px; font-weight: 700; }
+.notifItem p { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+.notifItem small { font-size: 11px; color: var(--text-muted); }
+.notifItem.success { border-left-color: var(--accent); }
+.notifItem.warning { border-left-color: var(--warning); }
+.notifItem.danger  { border-left-color: var(--danger); }
+
+@media (max-width: 420px) {
+  .userBadge { display: none; }
+  .balancePill { padding: 5px 10px; }
+  .notifPanel { width: 260px; }
+}

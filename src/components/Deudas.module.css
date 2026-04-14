@@ -1,0 +1,130 @@
+.summaryBar {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(239, 68, 68, 0.08));
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 18px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sumLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.sumValRed {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--danger-light);
+}
+
+.sumValGreen {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent-light);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.overdue { border-left: 3px solid var(--danger); }
+.nearDue { border-left: 3px solid var(--warning); }
+.ok      { border-left: 3px solid var(--accent); }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.acreedor {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.badge.overdue { background: rgba(239, 68, 68, 0.2); color: var(--danger-light); }
+.badge.nearDue { background: rgba(245, 158, 11, 0.2); color: var(--warning-light); }
+.badge.ok      { background: rgba(16, 185, 129, 0.2); color: var(--accent-light); }
+
+.amounts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.amountItem label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.amountItem span {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.red { color: var(--danger-light); }
+.green { color: var(--accent-light); }
+.amber { color: var(--warning-light); }
+
+.progress {
+  margin-bottom: 16px;
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.footer {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.deudoLabel {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 18px;
+}

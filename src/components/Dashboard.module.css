@@ -74,3 +74,9 @@
 .catBadge { padding: 2px 8px; border-radius: 999px; font-size: 10px; font-weight: 600; background: var(--primary-glow); color: var(--primary-light); }
 .impBadge { padding: 2px 8px; border-radius: 999px; font-size: 10px; font-weight: 600; background: rgba(245,158,11,.15); color: var(--warning-light); }
 .transAmt { font-size: 15px; font-weight: 800; flex-shrink: 0; }
+
+@media (max-width: 380px) {
+  .statsGrid { grid-template-columns: 1fr; }
+  .greeting { padding-bottom: 4px; }
+  .greetText { font-size: 18px; }
+}

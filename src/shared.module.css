@@ -174,4 +174,15 @@
 }
 .colorDot.active { border-color: #fff; transform: scale(1.2); }
 
-@media (max-width: 400px) { .catGrid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 400px) { 
+  .catGrid { grid-template-columns: repeat(2,1fr); } 
+  .btnPrimary, .btnAccent, .btnGhost { padding-top: 15px; padding-bottom: 15px; min-height: 48px; } /* Larger touch targets */
+}
+
+@media (max-width: 360px) {
+  .modalCard { padding: 20px 16px; }
+  .viewHeader h2 { font-size: 19px; }
+  .transDesc { font-size: 13px; }
+  .transAmount { font-size: 14px; }
+  .btnPrimary { font-size: 14px; }
+}
